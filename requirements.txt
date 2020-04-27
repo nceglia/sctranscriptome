@@ -1,0 +1,8 @@
+PyYAML
+matplotlib
+pandas
+rpy2
+dill
+scanpy
+tzlocal
+scipy==1.2.1

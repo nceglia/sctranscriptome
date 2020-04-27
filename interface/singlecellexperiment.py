@@ -24,7 +24,6 @@ class SingleCellExperiment(RS4):
     @classmethod
     def fromRData(sce_class, rdata):
         rs4_object = r.readRDS(rdata)
-
         sce = sce_class.fromRS4(rs4_object)
         sce.rs4 = rs4_object
         return sce
@@ -160,4 +159,3 @@ class SingleCellExperiment(RS4):
                 self._assays[label] = csr_matrix(pandas2ri.ri2py(assay))
             else:
                 self._assays[label] = assay
-
